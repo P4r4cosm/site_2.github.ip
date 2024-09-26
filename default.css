@@ -1,0 +1,363 @@
+/* Основные стили */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #F8F8F8 url(images/overlay.png) repeat;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px; /* Увеличен размер шрифта для лучшей читабельности */
+    color: rgba(0, 0, 0, .8);
+}
+/* Ограничение ширины контейнеров */
+.container {
+    max-width: 80%; /* Ширина страницы */
+    margin: 0 auto; /* Центрирование страницы */
+    padding: 0 20px; /* Отступы от краев */
+}
+
+/* Выровнять текст и элементы по центру */
+#header, #portfolio-wrapper, #page {
+    text-align: center;
+}
+
+/* Для колонок */
+.columns {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет переносить элементы на следующую строку */
+    justify-content: space-between; /* Распределяет элементы по строке */
+}
+
+.column {
+    flex: 0 0 24%; /* Устанавливает фиксированную ширину для каждой колонки (4 колонки в строке) */
+    margin-bottom: 20px; /* Отступ снизу для пространства между строками */
+}
+
+.box {
+    height: 200px; /* Фиксированная высота для всех боксов */
+    padding: 20px;
+    border: 1px solid #ccc; /* Добавьте границу для видимости */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для визуального эффекта */
+    background-color: #fff; /* Цвет фона */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Распределение содержимого внутри бокса */
+}
+
+/* Ограничиваем ширину изображений */
+.column img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #2D2D2D;
+}
+
+h2 {
+    padding: 0 0 30px 0;
+    font-size: 2em;
+}
+
+/* Стили для хедера и логотипа */
+#header-content {
+    display: flex;
+    justify-content: space-between; /* Размещает элементы по краям */
+    align-items: center; /* Выравнивание по вертикали */
+    padding: 20px;
+}
+
+
+#logo {
+    display: flex;
+    align-items: flex-start; /* Выравнивание логотипа по левому краю */
+}
+
+#logo h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700; /* Жирный шрифт для выделения */
+    font-size: 3em; /* Увеличенный размер шрифта для большей заметности */
+    color: #333; /* Темный цвет для контраста */
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase; /* Превращаем текст в заглавные буквы для современного стиля */
+    letter-spacing: 2px; /* Увеличиваем межбуквенное расстояние для более минималистичного вида */
+    transition: color 0.3s ease; /* Добавляем плавный переход цвета при наведении */
+}
+
+#logo h1:hover {
+    color: #555; /* Изменение цвета при наведении для эффекта взаимодействия */
+}
+
+
+/* Контейнер обертка */
+#wrapper {
+    background: #FFF;
+    margin: 20px auto;
+    max-width: 1200px; /* Ограничена максимальная ширина */
+}
+
+/* Стили для меню */
+#menu {
+    background: #101010;
+	border-radius: 8px; /* Закругленные углы меню */
+    overflow: hidden; /* Скрывает лишние части */
+	
+}
+
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Используем Flexbox для горизонтального расположения */
+}
+
+#menu li {
+    flex: 1; /* Элементы меню равномерно распределяются */
+}
+
+#menu a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.3s; /* Плавный переход цвета при наведении */
+}
+
+#menu a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Основной контент */
+#page {
+    display: flex; /* Используем Flexbox для основного контента */
+    flex-wrap: wrap; /* Позволяем перенос элементов */
+    padding: 5em 0;
+}
+
+#content {
+    flex: 3; /* Основной контент занимает 3/5 ширины */
+    padding-right: 20px;
+    border-right: 1px solid #E6E7DC;
+}
+
+#sidebar1, #sidebar2 {
+    flex: 1; /* Боковые панели занимают 1/5 ширины */
+    padding: 20px;
+}
+
+/* Стили для сетки изображений */
+.angry-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Четыре равные колонки */
+    gap: 10px; /* Пробел между элементами */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+
+.image {
+    position: relative;
+}
+
+.image img {
+    width: 100%;
+    height: auto; /* Адаптивная высота для изображений */
+    display: block;
+}
+
+/* Стили для подвала */
+#footer {
+    text-align: center;
+    padding: 50px 0 30px;
+}
+
+#footer p {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#footer a {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/* Стили для контактов */
+ul.contact {
+    list-style: none;
+    padding: 2em 0 0 0;
+    margin: 0;
+}
+
+ul.contact li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+ul.contact li a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Общие стили для кнопок */
+.button {
+    display: inline-block;
+    margin-top: 2em;
+    padding: 10px 20px;
+    background: #0C73D4;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    transition: background 0.3s; /* Плавный переход фона при наведении */
+}
+
+.button:hover {
+    background: #0A5EAB; /* Цвет кнопки при наведении */
+}
+
+/* Отступы для элементов списка */
+ul.style1, ul.style2, ul.style3 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.style1 li, ul.style2 li, ul.style3 li {
+    padding: 10px 0;
+    border-top: 1px solid #E6E7DC;
+}
+
+ul.style2 li {
+    padding: 25px 0;
+}
+
+ul.style3 img {
+    float: left;
+    margin-right: 20px;
+}
+
+/* Стили для сетки с элементами (Grid) */
+.angry-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+	
+    margin-top: 20px;
+}
+
+#item-0 {
+    background-color: #C5A775; 
+    grid-column: 1 / 2;
+    grid-row: 1;
+    border-radius: 10%;
+    padding: 5%;
+}
+
+#item-1 {
+    background-color: #A5B77C; 
+    grid-column: 2 / 3;
+    grid-row: 1;
+    border-radius: 10%;
+    padding: 5%;
+}
+
+#item-2 {
+    background-color: #57BB56; 
+    grid-column: 3 / 4;
+    grid-row: 1;
+    border-radius: 10%;
+    padding: 5%;
+}
+
+#item-3 {
+    background-color: #5969CD; 
+    grid-column: 4 / 5;
+    grid-row: 1;
+    border-radius: 10%;
+    padding: 5%;
+}
+
+/* Стили для социальных иконок */
+#social {
+    font-size: 1.5em;
+}
+
+#social ul.contact {
+    list-style: none;
+    display: flex;
+    gap: 15px; /* Расстояние между иконками */
+}
+
+#social ul.contact li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Размер иконки */
+    height: 50px; /* Размер иконки */
+    background-color: #333; /* Цвет фона для иконки */
+    color: white; /* Цвет иконки */
+    border-radius: 50%; /* Округление */
+    font-size: 2em; /* Увеличение текста/иконки */
+    text-align: center;
+}
+
+#social ul.contact li a:hover {
+    background-color: #555; /* Цвет фона при наведении */
+}
+
+/* Отображение для мобильных устройств */
+@media (max-width: 768px) {
+    #page {
+        flex-direction: column; /* Изменение на вертикальную компоновку для мобильных */
+    }
+    #content {
+        border-right: none; /* Убираем границу на мобильных */
+        padding-right: 0;
+        padding-right: 0; /* Убираем отступ справа на мобильных */
+    }
+    #sidebar1, #sidebar2 {
+        margin-right: 0; /* Убираем отступ справа для боковых панелей */
+        padding: 20px 0; /* Увеличиваем отступы для боковых панелей на мобильных */
+    }
+    .angry-grid {
+        grid-template-columns: repeat(2, 1fr); /* Две колонки на мобильных устройствах */
+    }
+}
+
+@media (max-width: 480px) {
+    #header-content {
+        flex-direction: column; /* Вертикальное расположение для заголовка и соцсетей */
+        align-items: center; /* Центрируем содержимое на маленьких экранах */
+        text-align: center;
+    }
+
+    #logo h1 {
+        font-size: 2.5em; /* Уменьшаем размер заголовка на маленьких экранах */
+        letter-spacing: 1px; /* Уменьшаем межбуквенное расстояние */
+    }
+
+    #menu ul {
+        flex-direction: column; /* Вертикальное меню для мобильных */
+    }
+
+    #menu li {
+        text-align: left; /* Выравнивание пунктов меню по левому краю */
+        padding: 10px;
+    }
+
+    .angry-grid {
+        grid-template-columns: 1fr; /* Одна колонка на очень маленьких экранах */
+    }
+
+    #footer {
+        padding: 30px 0 20px; /* Уменьшение отступов в подвале */
+    }
+    
+    .button {
+        padding: 8px 16px; /* Уменьшаем размер кнопок на маленьких экранах */
+    }
+}

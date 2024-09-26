@@ -8,6 +8,7 @@ html, body {
     font-size: 14px; /* Увеличен размер шрифта для лучшей читабельности */
     color: rgba(0, 0, 0, .8);
 }
+
 /* Ограничение ширины контейнеров */
 .container {
     max-width: 80%; /* Ширина страницы */
@@ -33,7 +34,7 @@ html, body {
 }
 
 .box {
-    height: 200px; /* Фиксированная высота для всех боксов */
+    height: auto; /* Убираем фиксированную высоту */
     padding: 20px;
     border: 1px solid #ccc; /* Добавьте границу для видимости */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для визуального эффекта */
@@ -41,6 +42,8 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Распределение содержимого внутри бокса */
+    text-align: center; /* Центрируем текст */
+    overflow: hidden; /* Скрывает текст, который выходит за границы */
 }
 
 /* Ограничиваем ширину изображений */
@@ -49,7 +52,6 @@ html, body {
     height: auto;
     border-radius: 8px;
 }
-
 
 h1, h2, h3 {
     margin: 0;
@@ -72,7 +74,6 @@ h2 {
     padding: 20px;
 }
 
-
 #logo {
     display: flex;
     align-items: flex-start; /* Выравнивание логотипа по левому краю */
@@ -94,7 +95,6 @@ h2 {
     color: #555; /* Изменение цвета при наведении для эффекта взаимодействия */
 }
 
-
 /* Контейнер обертка */
 #wrapper {
     background: #FFF;
@@ -105,9 +105,8 @@ h2 {
 /* Стили для меню */
 #menu {
     background: #101010;
-	border-radius: 8px; /* Закругленные углы меню */
+    border-radius: 8px; /* Закругленные углы меню */
     overflow: hidden; /* Скрывает лишние части */
-	
 }
 
 #menu ul {
@@ -152,15 +151,16 @@ h2 {
     padding: 20px;
 }
 
-/* Стили для сетки изображений */
+
+/* Стили для сетки с элементами (Grid) */
 .angry-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Четыре равные колонки */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Автоматически заполняет колонки минимальной шириной 200px */
     gap: 10px; /* Пробел между элементами */
-    margin-bottom: 20px; /* Отступ снизу */
+    margin-top: 20px; /* Отступ сверху */
 }
 
-
+/* Стили для отдельных элементов */
 .image {
     position: relative;
 }
@@ -188,7 +188,7 @@ h2 {
 /* Стили для контактов */
 ul.contact {
     list-style: none;
-    padding: 2em 0 0 0;
+    padding: 1em 0 0 0;
     margin: 0;
 }
 
@@ -245,7 +245,6 @@ ul.style3 img {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-	
     margin-top: 20px;
 }
 
@@ -301,7 +300,7 @@ ul.style3 img {
     background-color: #333; /* Цвет фона для иконки */
     color: white; /* Цвет иконки */
     border-radius: 50%; /* Округление */
-    font-size: 2em; /* Увеличение текста/иконки */
+    font-size: 1.4em; /* Увеличение текста/иконки */
     text-align: center;
 }
 
@@ -316,7 +315,6 @@ ul.style3 img {
     }
     #content {
         border-right: none; /* Убираем границу на мобильных */
-        padding-right: 0;
         padding-right: 0; /* Убираем отступ справа на мобильных */
     }
     #sidebar1, #sidebar2 {
@@ -324,7 +322,7 @@ ul.style3 img {
         padding: 20px 0; /* Увеличиваем отступы для боковых панелей на мобильных */
     }
     .angry-grid {
-        grid-template-columns: repeat(2, 1fr); /* Две колонки на мобильных устройствах */
+        grid-template-columns: repeat(2, 1fr); /* Две колонки на экранах до 768px */ 
     }
 }
 
@@ -350,7 +348,7 @@ ul.style3 img {
     }
 
     .angry-grid {
-        grid-template-columns: 1fr; /* Одна колонка на очень маленьких экранах */
+        grid-template-columns: 1fr;/* Одна колонка на очень маленьких экранах */
     }
 
     #footer {

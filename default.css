@@ -302,3 +302,54 @@ ul.style3 img {
     background-color: #555; /* Цвет фона при наведении */
 }
 
+/* Отображение для мобильных устройств */
+@media (max-width: 768px) {
+    #page {
+        flex-direction: column; /* Изменение на вертикальную компоновку для мобильных */
+    }
+    #content {
+        border-right: none; /* Убираем границу на мобильных */
+        padding-right: 0; /* Убираем отступ справа на мобильных */
+    }
+    #sidebar1, #sidebar2 {
+        margin-right: 0; /* Убираем отступ справа для боковых панелей */
+        padding: 20px 0; /* Увеличиваем отступы для боковых панелей на мобильных */
+    }
+    .angry-grid {
+        grid-template-columns: repeat(2, 1fr); /* Две колонки на экранах до 768px */ 
+    }
+}
+
+@media (max-width: 480px) {
+    #header-content {
+        flex-direction: column; /* Вертикальное расположение для заголовка и соцсетей */
+        align-items: center; /* Центрируем содержимое на маленьких экранах */
+        text-align: center;
+    }
+
+    #logo h1 {
+        font-size: 2.5em; /* Уменьшаем размер заголовка на маленьких экранах */
+        letter-spacing: 1px; /* Уменьшаем межбуквенное расстояние */
+    }
+
+    #menu ul {
+        flex-direction: column; /* Вертикальное меню для мобильных */
+    }
+
+    #menu li {
+        text-align: left; /* Выравнивание пунктов меню по левому краю */
+        padding: 10px;
+    }
+
+    .angry-grid {
+        grid-template-columns: 1fr;/* Одна колонка на очень маленьких экранах */
+    }
+
+    #footer {
+        padding: 30px 0 20px; /* Уменьшение отступов в подвале */
+    }
+    
+    .button {
+        padding: 8px 16px; /* Уменьшаем размер кнопок на маленьких экранах */
+    }
+}

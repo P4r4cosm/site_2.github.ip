@@ -287,6 +287,7 @@ ul.style3 img {
     list-style: none;
     display: flex;
     gap: 15px; /* Расстояние между иконками */
+    
 }
 
 #social ul.contact li a {
@@ -310,6 +311,13 @@ ul.style3 img {
 @media (max-width: 768px) {
     #page {
         flex-direction: column; /* Изменение на вертикальную компоновку для мобильных */
+    }
+    #menu ul
+    {
+        flex-direction: column;
+    }
+    #header-content {
+        flex-direction: column;
     }
     #content {
         border-right: none; /* Убираем границу на мобильных */

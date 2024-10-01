@@ -26,18 +26,30 @@ html, body {
     display: flex;
     flex-wrap: wrap; /* Позволяет переносить элементы на следующую строку */
     justify-content: space-between; /* Распределяет элементы по строке */
+    gap:20px;
 }
 
 .column {
-    flex: 0 0 24%; /* Устанавливает фиксированную ширину для каждой колонки (4 колонки в строке) */
-    margin-bottom: 20px; /* Отступ снизу для пространства между строками */
+    flex: 1; /* Устанавливаем размер относительно ширины окна, можно менять на 33% для 3 колонок */
+    min-width: 300px; /* Минимальная ширина колонки */
+    margin: 5px; /* Расстояние между элементами */ /* Устанавливает фиксированную ширину для каждой колонки (4 колонки в строке) */
+    margin-bottom: 50px; /* Отступ снизу для пространства между строками */
+    
 }
-
+/* Основной контент */
+#page {
+    display: flex; /* Используем Flexbox для основного контента */
+    flex-wrap: wrap; /* Позволяем перенос элементов */
+    padding: 30px;
+    justify-content: space-between; /* Распределение содержимого внутри бокса */
+    flex-direction: column;
+}
 .box {
-    height: auto; /* Убираем фиксированную высоту */
+    height: 100%; /* Убираем фиксированную высоту */
     padding: 20px;
     border: 1px solid #ccc; /* Добавьте границу для видимости */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для визуального эффекта */
+    border-radius: 10px;
     background-color: #fff; /* Цвет фона */
     display: flex;
     flex-direction: column;
@@ -48,7 +60,7 @@ html, body {
 
 /* Ограничиваем ширину изображений */
 .column img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     border-radius: 8px;
 }
@@ -133,12 +145,7 @@ h2 {
     color: rgba(255, 255, 255, 0.8);
 }
 
-/* Основной контент */
-#page {
-    display: flex; /* Используем Flexbox для основного контента */
-    flex-wrap: wrap; /* Позволяем перенос элементов */
-    padding: 5em 0;
-}
+
 
 #content {
     flex: 3; /* Основной контент занимает 3/5 ширины */
@@ -315,6 +322,7 @@ ul.style3 img {
         padding: 20px 0; /* Увеличиваем отступы для боковых панелей на мобильных */
     }
     .angry-grid {
+        display: grid;
         grid-template-columns: repeat(2, 1fr); /* Две колонки на экранах до 768px */ 
         grid-template-rows:repeat(2,auto);
     }

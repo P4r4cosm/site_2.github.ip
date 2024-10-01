@@ -3,7 +3,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: #F8F8F8 url(images/overlay.png) repeat;
+    background: #CFCBC8 repeat;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 14px; /* Увеличен размер шрифта для лучшей читабельности */
     color: rgba(0, 0, 0, .8);
@@ -53,10 +53,10 @@ html, body {
 .box {
     height: 100%; /* Убираем фиксированную высоту */
     padding: 20px;
-    border: 1px solid #ccc; /* Добавьте границу для видимости */
+    border: 1px solid #576319; /* Добавьте границу для видимости */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для визуального эффекта */
     border-radius: 10px;
-    background-color: #fff; /* Цвет фона */
+    background-color: #CFCBC8; /* Цвет фона */
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Распределение содержимого внутри бокса */
@@ -115,14 +115,14 @@ h2 {
 
 /* Контейнер обертка */
 #wrapper {
-    background: #FFF;
+    background: #CFCBC8;
     margin: 20px auto;
     max-width: 1200px; /* Ограничена максимальная ширина */
 }
 
 /* Стили для меню */
 #menu {
-    background: #101010;
+    background: #013F4E;
     border-radius: 8px; /* Закругленные углы меню */
     overflow: hidden; /* Скрывает лишние части */
 }
@@ -143,7 +143,7 @@ h2 {
     padding: 15px;
     text-decoration: none;
     text-align: center;
-    color: rgba(255, 255, 255, 0.5);
+    color: #CFCBC8;
     transition: color 0.3s; /* Плавный переход цвета при наведении */
 }
 
@@ -219,11 +219,11 @@ ul.contact li a {
     display: inline-block;
     margin-top: 2em;
     padding: 10px 20px;
-    background: #0C73D4;
+    background: #00718F;
     border-radius: 5px;
     text-decoration: none;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #CFCBC8;
     transition: background 0.3s; /* Плавный переход фона при наведении */
 }
 
@@ -240,7 +240,7 @@ ul.style1, ul.style2, ul.style3 {
 
 ul.style1 li, ul.style2 li, ul.style3 li {
     padding: 10px 0;
-    border-top: 1px solid #E6E7DC;
+    border-top: 1px solid #CFCBC8;
 }
 
 ul.style2 li {
@@ -255,25 +255,25 @@ ul.style3 img {
 
 
 #item-0 {
-    background-color: #C5A775; 
+    background-color: #576319; 
     border-radius: 10%;
     padding: 5%;
 }
 
 #item-1 {
-    background-color: #A5B77C; 
+    background-color: #0BA5BE; 
     border-radius: 10%;
     padding: 5%;
 }
 
 #item-2 {
-    background-color: #57BB56; 
+    background-color: #00718F; 
     border-radius: 10%;
     padding: 5%;
 }
 
 #item-3 {
-    background-color: #5969CD; 
+    background-color: #013F4E; 
     border-radius: 10%;
     padding: 5%;
 }
@@ -297,7 +297,7 @@ ul.style3 img {
     width: 50px; /* Размер иконки */
     height: 50px; /* Размер иконки */
     background-color: #333; /* Цвет фона для иконки */
-    color: white; /* Цвет иконки */
+    color: #CFCBC8; /* Цвет иконки */
     border-radius: 50%; /* Округление */
     font-size: 1.4em; /* Увеличение текста/иконки */
     text-align: center;
